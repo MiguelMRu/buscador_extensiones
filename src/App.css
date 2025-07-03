@@ -1,42 +1,87 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/*
+# Front-end Style Guide
+
+## Colors
+
+### Neutral
+
+- **Neutral 900**: `hsl(227, 75%, 14%)`
+- **Neutral 800**: `hsl(226, 25%, 17%)`
+- **Neutral 700**: `hsl(225, 23%, 24%)`
+- **Neutral 600**: `hsl(226, 11%, 37%)`
+- **Neutral 300**: `hsl(0, 0%, 78%)`
+- **Neutral 200**: `hsl(217, 61%, 90%)`
+- **Neutral 100**: `hsl(0, 0%, 93%)`
+- **Neutral 0**: `hsl(200, 60%, 99%)`
+
+### Red
+
+- **Red 400**: `hsl(3, 86%, 64%)`
+- **Red 500**: `hsl(3, 71%, 56%)`
+- **Red 700**: `hsl(3, 77%, 44%)`
+
+### Gradient
+
+- **Light Gradient**: `linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%)`
+- **Dark Gradient**: `linear-gradient(180deg, #040918 0%, #091540 100%)`
+
+## Typography
+
+### Body Copy
+
+- **Font size (paragraph)**: 16px
+
+### Font
+
+- **Family**: [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)
+- **Weights**: 400, 500, 700
+
+*/
+
+:root{
+  --primary-dark: hsl(227, 75%, 14%);
+  --secundary-dark: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: var(--secundary-dark);
+  border-radius: 15px;
+  color: var(--neutral-0);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.header button{
+  background-color: var(--neutral-700);
+  border: none;
+  border-radius: 10px;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+main{
+  width: 100%;
+  padding: 10px 20px;
+
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.main-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
