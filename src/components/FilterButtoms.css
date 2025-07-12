@@ -1,0 +1,33 @@
+
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-buttons input[type="radio"]{
+    display: none;
+}
+
+.filter-buttons label {
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--neutral-700);
+    transition: background-color 0.2s ease;
+}
+
+.filter-buttons label:hover {
+    background-color: var(--neutral-600);
+}
+
+
+.filter-buttons label:focus {
+    background-color: var(--red-500);
+}
+.filter-buttons input[type="radio"]:checked + label {
+    background-color: var(--red-700);
+    color: var(--primary-dark);
+    border-color: var(--red-700);
+}
