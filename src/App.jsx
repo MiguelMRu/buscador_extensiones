@@ -1,11 +1,30 @@
 import { useState } from 'react'
-import { Extensions } from './components/Extensions'
+import { Extensions  } from './components/Extensions'
 import logo from './assets/images/logo.svg'
 import sunIcon from './assets/images/icon-sun.svg'
 import { FilterButtoms } from './components/FilterButtoms'
+import {extensions as initialExtensions}  from './mocks/data.json'
 import './App.css'
 
 function App() {
+  const [extensions] = useState(initialExtensions)
+  // Estado para manejar el filtro de extensiones
+  const [filter, setFilter] = useState('All')
+
+
+  // Función para filtrar las extensiones según el estado
+  const filteredExtensions = (extensions) => {
+    if (filter === 'All')  return extensions
+    return extensions.filter(extension => {
+      if (filter === 'Active') {
+        return extension.isActive
+      } else if (filter === 'Inactive') {
+        return !extension.isActive
+      }
+    })
+  }
+  // Obtener las extensiones filtradas
+  const displayedExtensions = filteredExtensions(extensions)
 
   return (
     <>
@@ -18,13 +37,9 @@ function App() {
       <main>
           <header className='main-header'> 
             <h1>Extension List</h1>
-            <FilterButtoms/>
+            <FilterButtoms changeFilter={setFilter} />
           </header>
-
-          
-            <Extensions/>
-          
-
+            <Extensions extensions={displayedExtensions}  />
       </main>
         
     </>
