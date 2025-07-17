@@ -4,6 +4,7 @@
   gap: 50px;  
   width: 100%;
   list-style: none;
+  text-wrap: balance;
 }
 
 
@@ -34,10 +35,10 @@ form {
   
 }
 
-form button{
+.extension-button{
     background-color: var(--secundary-dark);
     border: 1px solid var(--neutral-600);
-    border-radius: 16px;
+    border-radius: 20px;
     transition: background-color 0.2s ease;
     padding: 10px 15px;
     font-weight: 700;
@@ -45,10 +46,9 @@ form button{
     transition: all 0.2s ease;
 }
 
-form button:hover {
-  background-color: var(--red-700);
+.extension-button:hover {
+  background-color: var(--red-500);
   color: var(--secundary-dark);
-  border-color: var(--red-700);
 
 }
 
@@ -93,7 +93,7 @@ form button:hover {
 }
 
 .checkbox:checked + .switch {
-  background-color: var(--red-700);
+  background-color: var(--red-500);
 }
 
 .checkbox:checked + .switch .slider {

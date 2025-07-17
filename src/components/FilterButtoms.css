@@ -16,6 +16,7 @@
     cursor: pointer;
     background-color: var(--neutral-700);
     transition: background-color 0.2s ease;
+    font-weight: 500;
 }
 
 .filter-buttons label:hover {
@@ -27,7 +28,7 @@
     background-color: var(--red-500);
 }
 .filter-buttons input[type="radio"]:checked + label {
-    background-color: var(--red-700);
+    background-color: var(--red-500);
     color: var(--primary-dark);
-    border-color: var(--red-700);
+    border-color: var(--red-500);
 }

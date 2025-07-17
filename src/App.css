@@ -101,3 +101,64 @@ main{
   
 }
 
+.light-theme{
+  background-image: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+
+  & .header {
+    background-color: var(--neutral-0);
+  }
+
+  & .header button{
+    background-color: var(--neutral-100);
+    transition: background-color 0.2s ease;
+  }
+
+  & .header button:hover{
+    background-color: var(--neutral-300);
+  }
+
+  & .main-header{
+    color: var(--primary-dark);
+  }
+
+  & .filter-buttons label {
+    background-color: var(--neutral-0);
+    border: 1px solid var(--neutral-200);
+    transition: background-color 0.2s ease;
+  }
+
+  & .filter-buttons label:hover {
+    opacity: .8;
+  }
+
+  & .filter-buttons input[type="radio"]:checked + label {
+      color: var(--neutral-0);
+  }
+
+  & .extension-item{
+    background-color: var(--neutral-0);
+    color: var(--secundary-dark);
+    border: 1px solid var(--neutral-200);
+  }
+
+  & .extension-item h3{
+    color: var(--primary-dark);
+  }
+
+  & .extension-item button{
+    color: var(--primary-dark);
+    background-color: var(--neutral-0);
+    border: 1px solid var(--neutral-200);
+    transition: all 0.2s ease;
+  }
+
+  & .extension-item button:hover{
+    color: var(--neutral-0);
+    background-color: var(--red-500);
+
+  }
+
+  & .switch{
+    background-color: var(--neutral-300);
+  }
+}

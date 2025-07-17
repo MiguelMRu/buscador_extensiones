@@ -6,6 +6,7 @@ import moonIcon from './assets/images/icon-moon.svg'
 import { FilterButtoms } from './components/FilterButtoms'
 import {extensions as initialExtensions}  from './mocks/data.json'
 import './App.css'
+import { useEffect } from 'react'
 
 function App() {
   const [extensions, setExtensions] = useState(initialExtensions)
@@ -16,12 +17,26 @@ function App() {
 
   const icon = darkMode ? sunIcon : moonIcon
 
+
+  useEffect(() =>{
+    if(!darkMode){
+      document.body.classList.add('light-theme')
+    } else {
+      document.body.classList.remove('light-theme')
+    }
+
+    return () =>{
+      document.body.classList.remove('light-theme')
+    }
+
+  },[darkMode])
+
   
 
   const handleDarkMode = (event) =>{
     event.preventDefault()
     setDarkMode(!darkMode)
-    console.log(darkMode)
+    
   }
 
 
